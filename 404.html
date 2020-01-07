@@ -13,10 +13,8 @@
 		Sorry, where is JavaScript?
 	</noscript>
 	<script>
-		var initial = window.location.pathname;
+		localStorage.setItem('key', window.location.pathname);
 		window.location.replace('/');
-		history.pushState(null, document.title, initial);
-		window.dispatchEvent(new Event('popstate'));
 	</script>
 </body>
 </html>
