@@ -1,0 +1,147 @@
+:root {
+	/* Color Theme */
+	--primary: #0000ff;
+	--on-primary: #ffffff;
+	--background: #ffffff;
+	--color: #141419;
+	--color-secondary: #64646e;
+
+	/* Scales */
+	--rem-size: 16px;
+
+	/* Typography */
+	--font-family: -apple-system, BlinkMacSystemFont,
+						"Segoe UI", Roboto, Helvetica, Arial, sans-serif, 
+						"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-weidth: 400;
+	--line-height: 1.75rem;
+	--letter-spacing: 0;
+
+	/* Transitions */
+	--transition: .3s;
+}
+
+@media (prefers-color-scheme: dark) {
+	 :root {
+	 	/* Dark Color Theme */
+		--background: #111115;
+		--color: #ffffff;
+		--color-secondary: #7b7b85;
+	}
+}
+
+
+/* Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+			  box-sizing: border-box;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+	line-height: 1;
+	letter-spacing: var(--letter-spacing);
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+		  -moz-user-select: none;
+			-ms-user-select: none;
+				 user-select: none;
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overscroll-behavior: none;
+}
+
+input, textarea, .selectable {
+	-webkit-touch-callout: default;
+	  -webkit-user-select: auto;
+		  -moz-user-select: auto;
+			-ms-user-select: auto;
+				 user-select: auto;
+}
+
+@media only screen and (min-width: 800px) {
+	 ::-webkit-scrollbar {
+		width: 1rem;
+	}
+	 ::-webkit-scrollbar-track {
+		background: var(--background);
+	}
+	 ::-webkit-scrollbar-thumb {
+		background: var(--contrast);
+		border-radius: 1rem;
+		border: .25rem solid var(--background);
+	}
+}
+
+html {
+	font-size: var(--rem-size);
+	color: var(--color);
+	background: var(--background);
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+
+/* Typography */
+
+* {
+	font-family: var(--font-family);
+	font-size: 1rem;
+	font-weight: var(--font-weidth);
+}
+
+p,
+.paragraph {
+	line-height: var(--line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+
+h1,
+h2 {
+	font-size: 2.4rem;
+	line-height: 3.25rem;
+}
+
+h3,
+h4 {
+	font-size: 1.6rem;
+	line-height: 2.5rem;
+}
+
+h5,
+h6 {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+b,
+.bold {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary);
+}
+
+
+/* Layout */
+
+.container {
+	--container-width: 600px;
+	padding-left: calc(50vw - (var(--container-width) / 2));
+	padding-right: calc(50vw - (var(--container-width) / 2));
+}
