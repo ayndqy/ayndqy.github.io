@@ -1,25 +1,28 @@
-self.addEventListener('install', (event) => {
-	event.waitUntil(async function() {
-		const cache = await caches.open('notecards');
-		await cache.addAll([
-			'./index.html',
-			'./global.css',
-			'./build/bundle.js',
-			'./build/bundle.css'
-		]);
-	}());
+var CACHE_NAME = 'notecards-cache-v1';
+
+self.addEventListener('install', function(event) {
+	event.waitUntil(
+		caches.open(CACHE_NAME)
+		.then(function(cache) {
+			console.log('Opened cache');
+			return cache.addAll([
+				'/',
+				'./index.html',
+				'./app.css',
+				'./fonts/fonts.css',
+				'./build/bundle.js',
+				'./build/bundle.css'
+			]);
+		})
+	);
 });
 
-self.addEventListener('fetch', (event) => {
-	event.respondWith(async function() {
-		const cache = await caches.open('notecards');
-		const cachedResponse = await cache.match(event.request);
-		const networkResponsePromise = fetch(event.request);
+self.addEventListener('fetch', function(event) {
+	console.log(event.request.url);
 
-		event.waitUntil(async function() {
-			const networkResponse = await networkResponsePromise;
-			await cache.put(event.request, networkResponse.clone());
-		}());
-		return cachedResponse || networkResponsePromise;
-	}());
-})
+	event.respondWith(
+		caches.match(event.request).then(function(response) {
+			return response || fetch(event.request);
+		})
+	);
+});
