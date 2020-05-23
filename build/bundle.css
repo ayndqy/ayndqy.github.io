@@ -5,7 +5,7 @@ header.svelte-1q921mu.svelte-1q921mu{position:sticky;top:0;background:var(--back
 @font-face{font-family:'Material Icons Outlined';font-style:normal;font-weight:400;src:url(http://fonts.gstatic.com/s/materialiconsoutlined/v18/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUcel5euIg.woff2)
       format('woff2')}i.svelte-ai8q32{display:inline-block;vertical-align:-0.45rem;color:inherit;font-family:'Material Icons Outlined';font-style:normal;font-weight:400;font-size:1.5rem;line-height:1;text-transform:none;overflow:hidden}
 .scroll-view.svelte-7j7s7c{position:absolute;width:100%;height:100vh;height:-webkit-fill-available;overflow-y:overlay;overflow-x:hidden;background:var(--background)}
-textarea.svelte-vrym5w{overflow:hidden;resize:none;width:100%;height:auto;min-height:calc(100vh - 138px);padding:1.5rem 0;color:inherit;background:var(--background);border:none;font-size:1rem;font-family:inherit;line-height:var(--line-height)}
+textarea.svelte-1k9trlu{overflow:hidden;resize:none;width:100%;height:auto;padding:1.5rem 0;color:inherit;background:var(--background);border:none;font-size:1rem;font-family:inherit;line-height:var(--line-height)}
 .logo.svelte-15caitf{font-size:1.25rem}.icons.svelte-15caitf{display:grid;grid-template-columns:1fr 1fr;grid-gap:0.5rem}.empty.svelte-15caitf{display:flex;text-align:center;justify-content:center;align-items:center;height:calc(100vh - 136px);color:var(--color-secondary)}
 
 /*# sourceMappingURL=bundle.css.map */
