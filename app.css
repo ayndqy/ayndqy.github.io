@@ -140,3 +140,11 @@ body {
 ::placeholder {
   color: var(--color-secondary);
 }
+
+/* Icons */
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/material-icons-outlined.woff2) format('woff2');
+}
