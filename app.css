@@ -6,7 +6,7 @@
   --surface: #1414190a;
   --border-color: #14141915;
   --color: #141419;
-  --color-secondary: #14141980;
+  --color-secondary: #141419b3;
 
   /* Typography */
   --font-family: 'Circe', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -91,16 +91,16 @@ body {
 .container {
   --container-width: 680px;
   width: 100%;
-  padding-left: calc(50vw - (var(--container-width) / 2) + 1rem);
-  padding-right: calc(50vw - (var(--container-width) / 2) + 1rem);
+  padding-left: calc(50% - (var(--container-width) / 2) + 1rem);
+  padding-right: calc(50% - (var(--container-width) / 2) + 1rem);
 
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .container.extended {
-  padding-left: calc(50vw - (var(--container-width) / 2));
-  padding-right: calc(50vw - (var(--container-width) / 2));
+  padding-left: calc(50% - (var(--container-width) / 2));
+  padding-right: calc(50% - (var(--container-width) / 2));
 }
 
 @media screen and (max-width: 696px) {
@@ -139,12 +139,4 @@ body {
 
 ::placeholder {
   color: var(--color-secondary);
-}
-
-/* Icons */
-@font-face {
-  font-family: 'Material Icons Outlined';
-  font-style: normal;
-  font-weight: 400;
-  src: url(/fonts/material-icons-outlined.woff2) format('woff2');
 }
