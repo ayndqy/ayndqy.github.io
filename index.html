@@ -10,7 +10,6 @@
 
     <title>Notecards</title>
 
-    <link rel="stylesheet" href="/fonts/fonts.css" />
     <link rel="stylesheet" href="/app.css" />
     <link rel="stylesheet" href="/build/bundle.css" />
 
@@ -34,32 +33,12 @@
       Sorry, where is JavaScript?
     </noscript>
     <script>
-      // Creating massive in localStorage
-      const INITIAL = [
-        {
-          id: Date.now(),
-          changed: Date.now(),
-          synced: 'false',
-          type: 'md',
-          state: 'active',
-          content: 'Hello world!',
-        },
-      ]
-
-      if (localStorage.getItem('cards') === null) {
-        localStorage.setItem('cards', JSON.stringify(INITIAL))
-      }
-
-      // Service worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-          navigator.serviceWorker
-            .register('/service-worker.js')
-            .then(function () {
-              console.log('Service worker registered')
-            })
-        })
-      }
+      // Service worker | uncoment for production
+      // if ('serviceWorker' in navigator) {
+      //   window.addEventListener('load', () => {
+      //     navigator.serviceWorker.register('sw.js')
+      //   })
+      // }
     </script>
   </body>
 </html>
